@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(n){const t=document.createElement("p");t.textContent=String(n),document.body.appendChild(t)}(function(){var n;const t=(t,e)=>{n=[t,e]},e=()=>{},c=()=>{};return function(o){var r=o[0],u=o[1];return n=null,t(r,u),n||(e(r,u),n)||(c(r,u),n)}}()([-90,45]))})();

@@ -16,9 +16,10 @@ const config = {
   mode: "development",
   devtool: false,
   entry: {
-    main: "./src/index",
+    d3: "./src/d3",
+    standalone: "./src/standalone",
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [],
   output: {
     clean: true,
     path: isRunningWebpack
@@ -30,5 +31,11 @@ const config = {
     css: true,
   },
 };
+
+Object.keys(config.entry).forEach((chunk) => {
+  config.plugins.push(
+    new HtmlWebpackPlugin({ filename: `${chunk}.html`, chunks: [chunk] })
+  );
+});
 
 export default config;
